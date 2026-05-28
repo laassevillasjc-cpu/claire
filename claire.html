@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are you sure??</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-canvas" id="bgCanvas"></div>
+
+  <div class="main-card" id="mainCard">
+
+    <!-- =============================================
+         ARE YOU SURE PAGE IMAGE
+         Replace with your actual image filename.
+         Example: src="images/the_rock.jpg"
+    ================================================ -->
+    <div class="cat-wrapper">
+      <img class="cat-img" src="images/the rock.jpg" alt="are you sure" />
+      <span class="bow-badge">🤨</span>
+    </div>
+
+    <div class="question">Are you sure??</div>
+    <div class="subtitle">think carefully babe ✨</div>
+
+    <div class="btn-group">
+
+      <!-- =============================================
+           YES BUTTON — goes to next frame for claire
+           Replace 'yes_claire.html' with your next page
+      ================================================ -->
+      <button class="choice-btn btn-claire" onclick="goTo('open.html')">
+        Yes Its Me!
+      </button>
+
+      <!-- =============================================
+           NO BUTTON — goes back to index.html
+           or replace with your next frame for "no"
+      ================================================ -->
+      <button class="choice-btn btn-ugly" onclick="goTo('index.html')">
+        NO hehe
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
