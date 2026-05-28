@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open It Baby</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === ENVELOPE CLICKABLE IMAGE === */
+    .envelope-wrapper {
+      cursor: pointer;
+      display: inline-block;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: bobble 3s ease-in-out infinite;
+    }
+
+    .envelope-wrapper:hover {
+      transform: scale(1.06);
+    }
+
+    .envelope-wrapper:active {
+      transform: scale(0.97);
+    }
+
+    .envelope-img {
+      width: 260px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(255, 100, 130, 0.18);
+    }
+
+    .click-hint {
+      font-size: 0.78rem;
+      color: #d48a9b;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50%       { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-canvas" id="bgCanvas"></div>
+
+  <div class="main-card" id="mainCard">
+
+    <!-- =============================================
+         ENVELOPE IMAGE — this is the clickable button!
+         Replace 'images/YOUR_ENVELOPE_IMAGE.jpg' with
+         your actual envelope image filename.
+         Example: src="images/open.png"
+         Clicking it goes to curious.html
+    ================================================ -->
+    <div class="envelope-wrapper" onclick="goTo('curious.html')">
+      <img
+        class="envelope-img"
+        src="images/close.png"
+        alt="open it baby"
+      />
+    </div>
+
+    <div class="question" style="margin-top: 1.2rem;">Open It Baby</div>
+    <div class="click-hint">tap the envelope ✨</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

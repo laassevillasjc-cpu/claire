@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who are you???</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating background emojis injected by script.js -->
+  <div class="bg-canvas" id="bgCanvas"></div>
+
+  <div class="main-card" id="mainCard">
+
+    <!-- =============================================
+         MAIN CENTER IMAGE
+         Replace with your actual image filename.
+         Put the image in the same folder or /images/
+         Example: src="images/hi-otag.gif"
+    ================================================ -->
+    <div class="cat-wrapper">
+      <img class="cat-img" src="images/hi-otag.gif" alt="cute image" />
+      <span class="bow-badge">🎀</span>
+    </div>
+
+    <!-- Question shown on page load -->
+    <div id="questionSection">
+      <div class="question">Who are you???</div>
+      <div class="subtitle">choose wisely baby ✨</div>
+      <div class="btn-group">
+
+        <!-- =============================================
+             CLAIRE BUTTON
+             Replace 'claire.html' with the filename
+             of the next page/frame for Claire.
+        ================================================ -->
+        <button class="choice-btn btn-claire" onclick="goTo('claire.html')">
+          🌸 Claire
+        </button>
+
+        <!-- =============================================
+             UGLY BITCH BUTTON
+             Replace 'ugly.html' with the filename
+             of the next page/frame for this option.
+        ================================================ -->
+        <button class="choice-btn btn-ugly" onclick="goTo('ugly.html')">
+          💀 Ugly Bitch
+        </button>
+
+      </div>
+    </div>
+
+  </div><!-- end .main-card -->
+
+  <script src="script.js"></script>
+</body>
+</html>
